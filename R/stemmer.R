@@ -152,7 +152,7 @@ fixAlifs <- function(texts){
 cleanChars <- function(texts){
   # http://jrgraphix.net/research/unicode_blocks.php
   ## ones I'm dropping
-  texts <- gsub('[\u00A0-\u0600]|[\u0600-\u0621]|[\u063b-\u0640]|[\u064b-\u065f]|[\u066a-\u067d]|[\u067f-\u06ff]|[\u0700-\uFB4F]|[\uFB50-\uFDFF]|[\uFE00-\uFFFF]','',texts)
+  texts <- gsub('[\u00A0-\u0600]|[\u0600-\u0620]|[\u063b-\u0640]|[\u064b-\u065f]|[\u066a-\u067d]|[\u067f-\u06ff]|[\u0700-\uFB4F]|[\uFB50-\uFDFF]|[\uFE00-\uFFFF]','',texts)
   ## I could sort through these ones too: http://jrgraphix.net/r/Unicode/FB50-FDFF, but I'm not right now
   ## clean up spaces
   return(trim(gsub(" {2,}"," ", texts)))
